@@ -1,0 +1,84 @@
+
+This project recieves two images of any format (tiff, png, bmp, gif, etc.) and extracts the movement of the ROBOT in meters from 
+the phase correlation calculation between the images.
+
+The calculation assumes only pitch & yaw movement (no rotation) between the images, therefore only translation change in the image is calculated.
+
+The parameters of the robot, camera and image are defined in a config.h file:
+
+// ROBOT PARAMETERS:
+
+#define installationCamHeight1 0.1 //meter - height of the camera from the floor.
+#define installationCamTilt1  10   //deg   - Tilt of the camera in respect to the Nadir point (=to the floor)
+
+
+// CAMERA PARAMETERS
+#define numPixelLength1  500 //[-] //number of pixels in the image length
+#define numPixelWidth1  500  //[-] //number of pixels in the image width
+
+// IMAGE PARAMETERS
+
+#define fovWidth1   10 //[deg]   //angular size of the image field of view (width)
+#define fovLength1   10  //[deg] //angular size of the image field of view (length)
+
+
+The classes are depicted as the following
+
+Robot class holds a camera class
+Camera class holds an image class
+
+The main function:
+
+1. declares a RobotClass object
+2. Extract two images in the camera object and calculates the phase correlation between them.
+3. Extract the movement in meters from the phase correlation calculation (pixel movement) assuming the mechanical constant parameters (FOV size, camera height and tilt, etc.)
+
+##################################################################################################################
+Example of the main function:
+
+int  main()
+{
+
+
+  RobotClass IROBOT;
+  IROBOT.Camera.PhaseCorrImage();
+  IROBOT.extractMovFromPixel();
+
+}
+
+##################################################################################################################
+
+Classes description:
+
+The robot class is the main class in this solution and is defined in the main(). the Robot class
+holds the image class and has the functionality to translate pixel change in adjacent images to
+horizontal and vertical movements using the function extractMovFromPixel()*/
+##################################################################################################################
+
+The Camera class is a member of the robot class and holds the Image class
+The main function of the camera class is performing a phase correlation operation from two images
+one image is considered to be the fixed image and the second image is the moving image. the number of movement
+pixels is calculated using the PhaseCorrImage() function.
+ This function was generated from an AUTOMATIC code in matlab using the following functions:
+ -PhaseCorr1
+ -PhaseCorr1_data
+ -PhaseCorr1_initialize
+ -PhaseCorr1_rtwutil
+ -PhaseCorr1_terminate
+ -PhaseCorr1_types
+ -relop
+ -rt_defines
+ -rt_nonfinite
+ -rtGetInf
+ -rtGetNan
+ -rtwtypes
+ -tmwtypes
+ 
+##################################################################################################################
+ 
+ The image class is a member of the camera class, The main function
+of the image class is extractImage which loads two images at any format (tiff, bmp, png, jpg, etc.) and transforming them
+into  grayscale images represented in a matrix of a size of [pixelLength1=500,pixelWidth1-500]
+The image size is defined in the configuration file (config.h) and is constant in this solution
+The function that performs this operation is called stb_image.h - v2.27 - public domain image loader
+##################################################################################################################
