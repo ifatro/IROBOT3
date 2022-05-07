@@ -31,7 +31,7 @@ Camera object holds an image object
 The main function performs:
 
 1. declares a RobotClass object
-2. Extract two images in the camera object and calculates the phase correlation between them.
+2. Extract two images in the camera object and calculate the phase correlation between them.
 3. Extract the movement in meters from the phase correlation calculation (pixel movement) assuming the given mechanical constant parameters (FOV size, camera height and tilt, etc.)
 
 ##################################################################################################################
