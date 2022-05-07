@@ -13,10 +13,10 @@ int  main()
   IROBOT.Camera.PhaseCorrImage();
 
 
-  std::cout << IROBOT.Camera.xpixelMov  << std::endl;
+  std::cout << IROBOT.Camera.xpixelMov << std::endl;
   std::cout << IROBOT.Camera.ypixelMov  << std::endl;
 
-  IROBOT.extrectMovFromPixel();
+  IROBOT.extractMovFromPixel();
 
   std::cout << IROBOT.xMovMeter << std::endl;
   std::cout << IROBOT.yMovMeter << std::endl;

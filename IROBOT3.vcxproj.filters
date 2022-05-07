@@ -60,9 +60,6 @@
     <ClCompile Include="rtGetNaN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ImageClass.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -155,7 +155,6 @@
     <ClCompile Include="rtGetInf.cpp" />
     <ClCompile Include="rtGetNaN.cpp" />
     <ClCompile Include="rt_nonfinite.cpp" />
-    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CameraClass.h" />
