@@ -90,4 +90,10 @@ of the image class is extractImage() which loads two images at any format (tiff,
 into  grayscale images represented in a matrix of a size of [pixelLength1=500,pixelWidth1=500]
 The image size is defined in the configuration file (config.h) and is constant in this solution.
 The function that performs this operation is called stb_image.h - v2.27 - public domain image loader.
+
+Images insertion is in the following lines in ImageClass.cpp- one should enter the path of the images
+
+	uint8_t* grayscale_image = stbi_load("C:\\.....\\I1.bmp", &width, &height, &bpp, 3);
+	uint8_t* grayscale_image2 = stbi_load("C:\\....\\I2.bmp", &width, &height, &bpp, 3);
+
 ##################################################################################################################
