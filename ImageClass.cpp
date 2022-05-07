@@ -25,12 +25,11 @@ void ImageClass::extractImage()
 
 	int width, height, bpp;
 
-	///uint8_t* grayscale_image = stbi_load("C:\\Users\\Eran\\Desktop\\IROBOT2\\PhaseCorr1 (2)\\PhaseCorr1\\I1c.bmp", &width, &height, &bpp, 3);
-	//uint8_t* grayscale_image2 = stbi_load("C:\\Users\\Eran\\Desktop\\IROBOT2\\PhaseCorr1 (2)\\PhaseCorr1\\I2c.bmp", &width, &height, &bpp, 3);
 
 
-	uint8_t* grayscale_image = stbi_load("C:\\Users\\Eran\\Desktop\\IROBOT2\\PhaseCorr1 (2)\\PhaseCorr1\\I1.bmp", &width, &height, &bpp, 3);
-	uint8_t* grayscale_image2 = stbi_load("C:\\Users\\Eran\\Desktop\\IROBOT2\\PhaseCorr1 (2)\\PhaseCorr1\\I2.bmp", &width, &height, &bpp, 3);
+
+	uint8_t* grayscale_image = stbi_load("C:\\....\\I1.bmp", &width, &height, &bpp, 3);
+	uint8_t* grayscale_image2 = stbi_load("C:\\....\\I2.bmp", &width, &height, &bpp, 3);
 
 
 
