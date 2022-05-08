@@ -11,16 +11,15 @@
 
 
 // CAMERA PARAMETERS
-#define pixelLength1  500 //[-] //number of pixels in the image length
-#define pixelWidth1  500  //[-] //number of pixels in the image width
+#define numPixelLength1  500 //[-] //number of pixels in the image length
+#define numPixelWidth1  500  //[-] //number of pixels in the image width
 
 // IMAGE PARAMETERS
 
 
 #define fovWidth1   10 //[deg]   //angular size of the image field of view (width)
 #define fovLength1   10  //[deg] //angular size of the image field of view (length)
-#define IfovWidth1   fovWidth1 / pixelWidth1     //[deg]  angular size of one pixel (width)
-#define IfovLength1   fovLength1 / pixelLength1  //[deg]  angular size of one pixel (length)
+
 
 
 

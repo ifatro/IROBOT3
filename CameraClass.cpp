@@ -12,8 +12,12 @@ CameraClass::CameraClass()
 
 	fovWidth = fovWidth1;  //[deg]
 	fovLength = fovLength1;  //[deg]
-	IfovWidth = IfovWidth1;//[deg]
-	IfovLength = IfovLength1;//[deg]
+
+	IfovWidth = fovWidth1 / double(Image.numPixelWidth);   //[deg]  angular size of one pixel (width)
+	IfovLength = fovLength1 / double(Image.numPixelLength); //[deg]  angular size of one pixel (length)
+
+
+
 
 	Image.extractImage();
 
@@ -28,7 +32,7 @@ CameraClass::CameraClass()
 void CameraClass::PhaseCorrImage()
 {
 
-	PhaseCorr1(Image.A_tmp, Image.B_tmp, &xpixelMov, &ypixelMov);
+	PhaseCorr1(Image.fixedImage, Image.movingImage, &xpixelMov, &ypixelMov);
 
 
 
