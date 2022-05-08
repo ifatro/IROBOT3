@@ -81,6 +81,10 @@ PhaseCorr1() was written in matlab.
  -rtGetNan
  -rtwtypes
  -tmwtypes
+ - fftshift
+ - minOrMax
+ - relop
+ - FFTImplementationCallback
  
 ##################################################################################################################
  ImageeClass
