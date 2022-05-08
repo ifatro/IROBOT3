@@ -1,5 +1,6 @@
+#include <iostream>
 #include "ImageClass.h"
-
+#include "ImagesNamesHeader.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -28,8 +29,29 @@ void ImageClass::extractImage()
 
 
 
-	uint8_t* grayscale_image = stbi_load("C:\\....\\I1.bmp", &width, &height, &bpp, 3);
-	uint8_t* grayscale_image2 = stbi_load("C:\\....\\I2.bmp", &width, &height, &bpp, 3);
+	uint8_t* grayscale_image = stbi_load(ImageName1, &width, &height, &bpp, 3);
+	if (!grayscale_image)
+	{
+		std::cout << "Image file not opened, cant continue: " << ImageName1 << std::endl;
+		exit(-1);
+	}
+
+
+	uint8_t* grayscale_image2 = stbi_load(ImageName2, &width, &height, &bpp, 3);
+	if (!grayscale_image2)
+	{
+		std::cout << "Image file not opened, cant continue: " << ImageName2 << std::endl;
+		exit(-1);
+	}
+
+
+
+	//uint8_t* grayscale_image = stbi_load("C:\\Users\\Eran\\Desktop\\IROBOT3\\IROBOT3\\I1.bmp", &width, &height, &bpp, 3);
+	//uint8_t* grayscale_image2 = stbi_load("C:\\Users\\Eran\\Desktop\\IROBOT3\\IROBOT3\\I2.bmp", &width, &height, &bpp, 3);
+
+
+
+
 
 
 

@@ -162,7 +162,9 @@
     <ClInclude Include="config.h" />
     <ClInclude Include="FFTImplementationCallback.h" />
     <ClInclude Include="fftshift.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="ImageClass.h" />
+    <ClInclude Include="ImagesNamesHeader.h" />
     <ClInclude Include="minOrMax.h" />
     <ClInclude Include="PhaseCorr1.h" />
     <ClInclude Include="PhaseCorr1_data.h" />
