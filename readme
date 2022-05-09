@@ -54,7 +54,7 @@ Classes description:
 RobotClass
 
 The robot class is the main class in this solution. the Robot class
-holds the image class and has the functionality to translate pixel change in adjacent images to
+holds the camera class and has the functionality to translate pixel change in adjacent images to
 horizontal and vertical movements using the function extractMovFromPixel()*/
 ##################################################################################################################
 
